@@ -1,22 +1,15 @@
-function firstWord(str) {
+function firstWord(s) {
   // your code here
-	if (str.trim() === '' || !str.includes(' ')) {
-    return str;
-  }
-
-  let result = '';
-  let index = 0;
-
-  // Iterate through characters until a space is encountered
-  while (index < str.length && str[index] !== ' ') {
-    result += str[index];
-    index++;
-  }
-
-  return result;
+	let str ='';
+	let idx=0;
+	while (idx < s.length && s[idx] !==' ') {
+		str+=s[idx];
+		idx++;
+	}
+	return str;
 }
 
 // Do not change the code below
 
-const str = prompt("Enter String:");
+const s = prompt("Enter String:");
 alert(firstWord(s));
