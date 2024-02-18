@@ -1,15 +1,16 @@
-function firstWord(s) {
+function firstWord(str) {
   // your code here
-	let str ='';
-	let idx=0;
-	while (idx < s.length && s[idx] !==' ') {
-		str+=s[idx];
-		idx++;
-	}
-	return str;
+	 if (!str || str.indexOf(' ') === -1) {
+        return str;
+    } else {
+        // Find the index of the first space
+        const spaceIndex = str.indexOf(' ');
+        // Return the substring from the beginning to the first space
+        return str.substring(0, spaceIndex);
+    }
 }
 
 // Do not change the code below
 
-const s = prompt("Enter String:");
+ const s = prompt("Enter String:");
 alert(firstWord(s));
