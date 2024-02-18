@@ -1,5 +1,6 @@
 function firstWord(str) {
   // your code here
+	str = str.trim();
 	 if (!str || str.indexOf(' ') === -1) {
         return str;
     } else {
